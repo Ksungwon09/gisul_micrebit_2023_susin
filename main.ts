@@ -19,25 +19,67 @@ function 고속쫘회전2 () {
 radio.onReceivedNumberDeprecated(function (receivedNumber) {
     if (receivedNumber == 0) {
         젅니()
-        basic.showNumber(1)
+        basic.showLeds(`
+            . . # . .
+            . # # # .
+            # . # . #
+            . . # . .
+            . . # . .
+            `)
     } else if (receivedNumber == 1) {
         훚니()
-        basic.showNumber(2)
+        basic.showLeds(`
+            . . # . .
+            . . # . .
+            # . # . #
+            . # # # .
+            . . # . .
+            `)
     } else if (receivedNumber == 2) {
         젓지()
-        basic.showNumber(3)
+        basic.showLeds(`
+            # . . . #
+            . # . # .
+            . . # . .
+            . # . # .
+            # . . . #
+            `)
     } else if (receivedNumber == 3) {
         웃회전()
-        basic.showNumber(4)
+        basic.showLeds(`
+            . . # . .
+            . . . # .
+            # # # # #
+            . . . # .
+            . . # . .
+            `)
     } else if (receivedNumber == 4) {
         쫘회전()
-        basic.showNumber(5)
+        basic.showLeds(`
+            . . # . .
+            . # . . .
+            # # # # #
+            . # . . .
+            . . # . .
+            `)
     } else if (receivedNumber == 5) {
         고속웃회전()
-        basic.showNumber(6)
+        basic.showLeds(`
+            . . # . .
+            . . # # .
+            # # # # #
+            . . # # .
+            . . # . .
+            `)
     } else if (receivedNumber == 6) {
         고속쫘회전2()
-        basic.showNumber(7)
+        basic.showLeds(`
+            . . # . .
+            . # # . .
+            # # # # #
+            . # # . .
+            . . # . .
+            `)
     }
 })
 function 훚니 () {
@@ -90,6 +132,8 @@ pins.digitalWritePin(DigitalPin.P1, 0)
 pins.digitalWritePin(DigitalPin.P2, 0)
 pins.digitalWritePin(DigitalPin.P12, 0)
 pins.digitalWritePin(DigitalPin.P13, 0)
+pins.digitalWritePin(DigitalPin.P14, 0)
+pins.digitalWritePin(DigitalPin.P15, 0)
 basic.showLeds(`
     . . # . .
     . . # . .
